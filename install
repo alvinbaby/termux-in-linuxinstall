@@ -1,0 +1,7 @@
+pkg update ; pkg upgrade -y > /dev/null 2>&1
+pkg install wget -y > /dev/null 2>&1
+pkg install curl -y > /dev/null 2>&1
+pkg install ruby -y > /dev/null 2>&1 ; gem install lolcat > /dev/null 2>&1
+echo "for Install Any Linux TyPe Name Of The Linux Likekali fedora ubuntu ubuntu20 arch alpine manjaro " | lolcat
+read -p $'\e[31m[\e[32m*\e[31m]\e[33m Which Linux Do You Want To Install [Ex. kali ] : \e[0m' linux
+bash script/$linux
