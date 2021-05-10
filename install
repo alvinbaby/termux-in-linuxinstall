@@ -103,9 +103,9 @@ do
     elif [ $ch -eq 7 ];then
         banner
         echo " Silence Installation Started Please DoNot Turn Off Your Data Connection It May Take 30 minutes " |lolcat
-        cp script/arch $HOME
+        cp script/arch-armhf $HOME
         cd $HOME
-        bash arch > /dev/null 2>&1 
+        bash arch-armhf > /dev/null 2>&1 
         echo " Now Run ./start-arch.sh in home directory " | lolcat
     elif [ $ch -eq 8 ];then
         banner
