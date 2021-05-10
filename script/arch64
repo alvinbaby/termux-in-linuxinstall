@@ -71,12 +71,36 @@ echo "making $bin executable"
 chmod +x $bin
 echo "removing image for some space"
 rm $tarball
-echo "Preparing additional component for the first time, please wait..."
-wget "https://raw.githubusercontent.com/Techriz/AndronixOrigin/master/Installer/Arch/amd64/resolv.conf" -P arch-fs/root > /dev/null
-wget "https://raw.githubusercontent.com/Techriz/AndronixOrigin/master/Installer/Arch/amd64/additional.sh" -P arch-fs/root > /dev/null
-rm -rf arch-fs/root/.bash_profile
 echo "You can now launch Arch Linux with the ./${bin} script"
-echo "Welcome to Arch Linux | Bare"
+echo "Preparing additional component for the first time, please wait..."
+wget "https://raw.githubusercontent.com/Techriz/AndronixOrigin/master/Installer/Arch/amd64/resolv.conf" -P arch-fs/root
+wget "https://raw.githubusercontent.com/Techriz/AndronixOrigin/master/Installer/Arch/amd64/additional.sh" -P arch-fs/root
+rm -rf arch-fs/root/.bash_profile
 clear
-bash start-arch.sh
-echo "done"
+
+
+wget $dlink/xfce4_de.sh -O $folder/root/xfce4_de.sh
+echo " #!/bin/bash
+bash ~/additional.sh
+pacman -Syyuu --noconfirm && pacman -S wget sudo --noconfirm 
+mkdir -p ~/.vnc
+clear
+if [ ! -f /root/xfce4_de.sh ]; then
+    wget --tries=20 $dlink/xfce4_de.sh -O /root/xfce4_de.sh
+    bash ~/xfce4_de.sh
+else
+    bash ~/xfce4_de.sh
+fi
+clear
+if [ ! -f /usr/local/bin/vncserver-start ]; then
+    wget --tries=20  $dlink/XFCE4/vncserver-start -O /usr/local/bin/vncserver-start 
+    wget --tries=20 $dlink/XFCE4/vncserver-stop -O /usr/local/bin/vncserver-stop
+fi
+if [ ! -f /usr/bin/vncserver ]; then
+    pacman -S tigervnc --noconfirm > /dev/null
+fi
+clear
+echo 'Welcome to Arch Linux | XFCE'
+rm -rf ~/.bash_profile" > $folder/root/.bash_profile 
+
+bash $bin

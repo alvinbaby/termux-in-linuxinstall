@@ -1,11 +1,11 @@
 #!/data/data/com.termux/files/usr/bin/bash
 folder=fedora-fs
+dlink="https://raw.githubusercontent.com/AndronixApp/AndronixOrigin/master/Fedora"
 if [ -d "$folder" ]; then
 	first=1
 	echo "skipping downloading"
 fi
 tarball="fedora-rootfs.tar.xz"
-
 if [ "$first" != 1 ];then
 	echo "Download Rootfs, this may take a while base on your internet speed."
 	arch=$(dpkg --print-architecture)
@@ -39,9 +39,7 @@ if [ "$first" != 1 ];then
 			echo "unknown architecture"; exit 1 ;;
 		esac
 		wget "https://github.com/Techriz/AndronixOrigin/blob/master/Rootfs/Fedora/${archurl}/fedora-rootfs-${archurl}.tar.xz?raw=true" -O $tarball
-	fi
-
-
+  fi
 	cur=`pwd`
 	mkdir -p "$folder"
 	cd "$folder"
@@ -99,5 +97,34 @@ echo "making $bin executable"
 chmod +x $bin
 echo "removing image for some space"
 rm $tarball
-echo "You can now launch Fedora with the ./${bin} script next time"
+
+#DE installation addition
+
+wget --tries=20 $dlink/XFCE4/xfce4_de.sh -O $folder/root/xfce4_de.sh
+clear
+echo "Setting up the installation of XFCE VNC"
+echo "#!/bin/bash
+yum install wget -y
+clear
+if [ ! -f /root/xfce4_de.sh ]; then
+    wget --tries=20 $dlink/XFCE4/xfce4_de.sh -O /root/xfce4_de.sh
+    bash ~/xfce4_de.sh
+else
+    bash ~/xfce4_de.sh
+fi
+clear
+if [ ! -f /usr/local/bin/vncserver-start ]; then
+    wget --tries=20  $dlink/LXDE/vncserver-start -O /usr/local/bin/vncserver-start
+    wget --tries=20 $dlink/LXDE/vncserver-stop -O /usr/local/bin/vncserver-stop
+        chmod +x /usr/local/bin/vncserver-stop
+    chmod +x /usr/local/bin/vncserver-start
+fi
+if [ ! -f /usr/bin/vncserver ]; then
+    yum install tigervnc-server -y
+fi
+clear
+echo 'Installing browser'
+yum install firefox -y
+rm -rf ~/.bash_profile" > $folder/root/.bash_profile 
+rm -rf fedora-lxde.sh
 bash $bin

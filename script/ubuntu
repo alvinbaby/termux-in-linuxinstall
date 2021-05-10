@@ -1,6 +1,7 @@
 #!/data/data/com.termux/files/usr/bin/bash
 pkg install wget -y 
 folder=ubuntu-fs
+dlink="https://raw.githubusercontent.com/AndronixApp/AndronixOrigin/master/APT"
 if [ -d "$folder" ]; then
 	first=1
 	echo "skipping downloading"
@@ -79,4 +80,33 @@ echo "making $bin executable"
 chmod +x $bin
 echo "removing image for some space"
 rm $tarball
-echo "You can now launch Ubuntu with the ./${bin} script"
+
+#DE installation addition
+
+wget $dlink/XFCE4/xfce4_de.sh -O $folder/root/xfce4_de.sh
+clear
+echo "Setting up the installation of XFCE VNC"
+
+echo "APT::Acquire::Retries \"3\";" > $folder/etc/apt/apt.conf.d/80-retries #Setting APT retry count
+echo "#!/bin/bash
+apt update -y && apt install sudo wget -y
+clear
+if [ ! -f /root/xfce4_de.sh ]; then
+    wget --tries=20 $dlink/XFCE4/xfce4_de.sh -O /root/xfce4_de.sh
+    bash ~/xfce4_de.sh
+else
+    bash ~/xfce4_de.sh
+fi
+clear
+if [ ! -f /usr/local/bin/vncserver-start ]; then
+    wget --tries=20  $dlink/XFCE4/vncserver-start -O /usr/local/bin/vncserver-start
+    wget --tries=20 $dlink/XFCE4/vncserver-stop -O /usr/local/bin/vncserver-stop
+    chmod +x /usr/local/bin/vncserver-stop
+    chmod +x /usr/local/bin/vncserver-start
+fi
+if [ ! -f /usr/bin/vncserver ]; then
+    apt install tigervnc-standalone-server -y
+fi
+rm -rf ~/.bash_profile" >> ubuntu-fs/root/.bash_profile 
+
+bash $bin
