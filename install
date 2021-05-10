@@ -114,12 +114,12 @@ do
         bash manjaro > /dev/null 2>&1 
         echo " Now Run ./start-manjaro.sh in home directory "
     elif [ $ch -eq 9 ];then
-       banner
-       echo " Silence Installation Started Please DoNot Turn Off Your Data Connection It May Take 30 minutes " |lolcat
-       cp script/debian $HOME
+        banner
+        echo " Silence Installation Started Please DoNot Turn Off Your Data Connection It May Take 30 minutes " |lolcat
+        cp script/debian $HOME
         cd $HOME
-       bash debian > /dev/null 2>&1 
-       echo " Now Run ./start-debian.sh in home directory "
+        bash debian > /dev/null 2>&1 
+        echo " Now Run ./start-debian.sh in home directory "
     else
         echo -e "\e[4;32m Invalid Input !!! \e[0m"
         pause
