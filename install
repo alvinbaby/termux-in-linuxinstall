@@ -56,7 +56,7 @@ do
     echo "press 7 To Arch " |lolcat
     echo "press 8 To Manjaro " |lolcat
     echo "press 9 To Debian " |lolcat
-    read ch
+    read -p $'\e[31m[\e[32m*\e[31m]\e[33m which linux you want to install [Ex. 1 ] : \e[0m' ch
     clear
     if [ $ch -eq 1 ];then
     echo " Installation Started " | lolcat
