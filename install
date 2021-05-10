@@ -2,6 +2,7 @@
 pkg update > /dev/null 2>&1 ; pkg upgrade -y 
 pkg install wget -y > /dev/null 2>&1
 pkg install curl -y > /dev/null 2>&1
+pkg install chroot promot -y > /dev/null 2>&1
 pkg install ruby -y > /dev/null 2>&1 ; gem install lolcat > /dev/null 2>&1
 echo "for Install Any Linux TyPe Name Of The Linux Likekali fedora ubuntu ubuntu20 arch alpine manjaro " | lolcat
 clear
