@@ -1,5 +1,6 @@
 #!/data/data/com.termux/files/usr/bin/bash
-pkg update > /dev/null 2>&1 ; pkg upgrade -y 
+pkg update > /dev/null 2>&1 ; pkg upgrade -y
+pkg install tar -y > /dev/null 2>&1 ; pkg install curl -y > /dev/null 2>&1 ; pkg install proot -y > /dev/null 2>&1
 pkg install wget -y > /dev/null 2>&1
 pkg install curl -y > /dev/null 2>&1
 pkg install chroot proot -y > /dev/null 2>&1
