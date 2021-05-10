@@ -76,7 +76,7 @@ do
         cp script/ubuntu20 $HOME
         cd $HOME
         bash ubuntu20 > /dev/null 2>&1 
-        echo " Now Run ./start-ubuntu20.sh " | lolcat
+        echo " Now Run ./start-ubuntu20.sh  in home directory " | lolcat
         exit
     elif [ $ch -eq 4 ];then
         banner
@@ -84,42 +84,42 @@ do
         cp script/ubuntu $HOME
         cd $HOME
         bash ubuntu > /dev/null 2>&1 
-        echo " Now Run ./start-ubuntu.sh " | lolcat
+        echo " Now Run ./start-ubuntu.sh in home directory " | lolcat
     elif [ $ch -eq 5 ];then
         banner
         echo " Silence Installation Started Please DoNot Turn Off Your Data Connection It May Take 30 minutes " |lolcat
         cp script/fedora $HOME
         cd $HOME
         bash fedora > /dev/null 2>&1 
-        echo "Now Run ./start-fedora " | lolcat
+        echo "Now Run ./start-fedora in home directory " | lolcat
     elif [ $ch -eq 6 ];then
         banner
         echo " Silence Installation Started Please DoNot Turn Off Your Data Connection It May Take 30 minutes " |lolcat
         cp script/alpine $HOME
         cd $HOME
         bash alpine > /dev/null 2>&1 
-        echo "Now Run ./start-aloine.sh " | lolcat
+        echo "Now Run ./start-aloine.sh in home directory " | lolcat
     elif [ $ch -eq 7 ];then
         banner
         echo " Silence Installation Started Please DoNot Turn Off Your Data Connection It May Take 30 minutes " |lolcat
         cp script/arch $HOME
         cd $HOME
         bash arch > /dev/null 2>&1 
-        echo " Now Run ./start-arch.sh " | lolcat
+        echo " Now Run ./start-arch.sh in home directory " | lolcat
     elif [ $ch -eq 8 ];then
         banner
         echo " Silence Installation Started Please DoNot Turn Off Your Data Connection It May Take 30 minutes " |lolcat
         cp script/manjaro $HOME
         cd $HOME
         bash manjaro > /dev/null 2>&1 
-        echo " Now Run ./start-manjaro.sh "
+        echo " Now Run ./start-manjaro.sh in home directory "
     elif [ $ch -eq 9 ];then
        banner
        echo " Silence Installation Started Please DoNot Turn Off Your Data Connection It May Take 30 minutes " |lolcat
        cp script/debian $HOME
         cd $HOME
        bash debian > /dev/null 2>&1 
-       echo " Now Run ./start-debian.sh "
+       echo " Now Run ./start-debian.sh in home directory "
     else
         echo -e "\e[4;32m Invalid Input !!! \e[0m"
         pause
