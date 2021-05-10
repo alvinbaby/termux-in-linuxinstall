@@ -61,12 +61,12 @@ do
     clear
     if [ $ch -eq 1 ];then
     echo " Installation Started " | lolcat
-        bash script/kali
+        bash .script/kali
         exit
     elif [ $ch -eq 2 ];then
         banner
         echo " Silence Installation Started Please DoNot Turn Off Your Data Connection " |lolcat
-        cp script/parrot $HOME
+        cp .script/parrot $HOME
         cd $HOME
         bash parrot > /dev/null 2>&1 
         echo " Now Type ./start-parrot.sh in home directory " | lolcat
@@ -74,7 +74,7 @@ do
     elif [ $ch -eq 3 ];then
         banner
         echo " Silence Installation Started Please DoNot Turn Off Your Data Connection It May Take 30 minutes " |lolcat
-        cp script/ubuntu20 $HOME
+        cp .script/ubuntu20 $HOME
         cd $HOME
         bash ubuntu20 > /dev/null 2>&1 
         echo " Now Run ./start-ubuntu20.sh  in home directory " | lolcat
@@ -82,42 +82,42 @@ do
     elif [ $ch -eq 4 ];then
         banner
         echo " Silence Installation Started Please DoNot Turn Off Your Data Connection It May Take 30 minutes " |lolcat
-        cp script/ubuntu $HOME
+        cp .script/ubuntu $HOME
         cd $HOME
         bash ubuntu > /dev/null 2>&1 
         echo " Now Run ./start-ubuntu.sh in home directory " | lolcat
     elif [ $ch -eq 5 ];then
         banner
         echo " Silence Installation Started Please DoNot Turn Off Your Data Connection It May Take 30 minutes " |lolcat
-        cp script/fedora $HOME
+        cp .script/fedora $HOME
         cd $HOME
         bash fedora > /dev/null 2>&1 
         echo "Now Run ./start-fedora in home directory " | lolcat
     elif [ $ch -eq 6 ];then
         banner
         echo " Silence Installation Started Please DoNot Turn Off Your Data Connection It May Take 30 minutes " |lolcat
-        cp script/alpine $HOME
+        cp .script/alpine $HOME
         cd $HOME
         bash alpine > /dev/null 2>&1 
         echo "Now Run ./start-aloine.sh in home directory " | lolcat
     elif [ $ch -eq 7 ];then
         banner
         echo " Silence Installation Started Please DoNot Turn Off Your Data Connection It May Take 30 minutes " |lolcat
-        cp script/arch-armhf $HOME
+        cp .script/arch-armhf $HOME
         cd $HOME
         bash arch-armhf > /dev/null 2>&1 
         echo " Now Run ./start-arch.sh in home directory " | lolcat
     elif [ $ch -eq 8 ];then
         banner
         echo " Silence Installation Started Please DoNot Turn Off Your Data Connection It May Take 30 minutes " |lolcat
-        cp script/manjaro $HOME
+        cp .script/manjaro $HOME
         cd $HOME
         bash manjaro > /dev/null 2>&1 
         echo " Now Run ./start-manjaro.sh in home directory "
     elif [ $ch -eq 9 ];then
         banner
         echo " Silence Installation Started Please DoNot Turn Off Your Data Connection It May Take 30 minutes " |lolcat
-        cp script/debian $HOME
+        cp .script/debian $HOME
         cd $HOME
         bash debian > /dev/null 2>&1 
         echo " Now Run ./start-debian.sh in home directory "
