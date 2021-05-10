@@ -65,8 +65,9 @@ do
     elif [ $ch -eq 2 ];then
         banner
         echo " Silence Installation Started Please DoNot Turn Off Your Data Connection " |lolcat
-        bash script/parrot > /dev/null 2>&1 
-        echo " Now Type ./start-parrot.sh " | lolcat
+        cp script/parrot $HOME
+        bash $HOME/parrot > /dev/null 2>&1 
+        echo " Now Type ./start-parrot.sh in home directory " | lolcat
         exit
     elif [ $ch -eq 3 ];then
         banner
