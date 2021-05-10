@@ -73,38 +73,52 @@ do
     elif [ $ch -eq 3 ];then
         banner
         echo " Silence Installation Started Please DoNot Turn Off Your Data Connection It May Take 30 minutes " |lolcat
-        bash script/ubuntu20 > /dev/null 2>&1 
+        cp script/ubuntu20 $HOME
+        cd $HOME
+        bash ubuntu20 > /dev/null 2>&1 
         echo " Now Run ./start-ubuntu20.sh " | lolcat
         exit
     elif [ $ch -eq 4 ];then
         banner
         echo " Silence Installation Started Please DoNot Turn Off Your Data Connection It May Take 30 minutes " |lolcat
-        bash script/ubuntu > /dev/null 2>&1 
+        cp script/ubuntu $HOME
+        cd $HOME
+        bash ubuntu > /dev/null 2>&1 
         echo " Now Run ./start-ubuntu.sh " | lolcat
     elif [ $ch -eq 5 ];then
         banner
         echo " Silence Installation Started Please DoNot Turn Off Your Data Connection It May Take 30 minutes " |lolcat
-        bash script/fedora > /dev/null 2>&1 
+        cp script/fedora $HOME
+        cd $HOME
+        bash fedora > /dev/null 2>&1 
         echo "Now Run ./start-fedora " | lolcat
     elif [ $ch -eq 6 ];then
         banner
         echo " Silence Installation Started Please DoNot Turn Off Your Data Connection It May Take 30 minutes " |lolcat
-        bash script/alpine > /dev/null 2>&1 
+        cp script/alpine $HOME
+        cd $HOME
+        bash alpine > /dev/null 2>&1 
         echo "Now Run ./start-aloine.sh " | lolcat
     elif [ $ch -eq 7 ];then
         banner
         echo " Silence Installation Started Please DoNot Turn Off Your Data Connection It May Take 30 minutes " |lolcat
-        bash script/arch > /dev/null 2>&1 
+        cp script/arch $HOME
+        cd $HOME
+        bash arch > /dev/null 2>&1 
         echo " Now Run ./start-arch.sh " | lolcat
     elif [ $ch -eq 8 ];then
         banner
         echo " Silence Installation Started Please DoNot Turn Off Your Data Connection It May Take 30 minutes " |lolcat
-        bash script/manjaro > /dev/null 2>&1 
+        cp script/manjaro $HOME
+        cd $HOME
+        bash manjaro > /dev/null 2>&1 
         echo " Now Run ./start-manjaro.sh "
     elif [ $ch -eq 9 ];then
        banner
        echo " Silence Installation Started Please DoNot Turn Off Your Data Connection It May Take 30 minutes " |lolcat
-       bash script/debian > /dev/null 2>&1 
+       cp script/debian $HOME
+        cd $HOME
+       bash debian > /dev/null 2>&1 
        echo " Now Run ./start-debian.sh "
     else
         echo -e "\e[4;32m Invalid Input !!! \e[0m"
