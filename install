@@ -1,8 +1,88 @@
-#!/data/data/com.termux/files/use/bin/bash
-pkg update -y > /dev/null 2>&1 ; pkg upgrade -y > /dev/null 2>&1
+pkg update ; pkg upgrade -y > /dev/null 2>&1
 pkg install wget -y > /dev/null 2>&1
 pkg install curl -y > /dev/null 2>&1
 pkg install ruby -y > /dev/null 2>&1 ; gem install lolcat > /dev/null 2>&1
-echo "for Install Any Linux TyPe Name Of The Linux Like kali,fedora,ubuntu,ubuntu20,arch,alpine,manjaro parrot 🐦" | lolcat
-read -p $'\e[31m[\e[32m*\e[31m]\e[33m Which Linux Do You Want To Install [Ex. kali ] : \e[0m' linux
-bash script/$linux
+echo "for Install Any Linux TyPe Name Of The Linux Likekali fedora ubuntu ubuntu20 arch alpine manjaro " | lolcat
+clear
+echo "Wait For 5 Sec " | lolcat
+sleep 3
+echo 
+banner() {
+    clear
+    echo -e "\e[1;31m"
+    if ! [ -x "$(command -v figlet)" ]; then
+        echo 'Introducing Any Linux In Termux'
+    else
+        figlet LinuX 
+    fi
+    if ! [ -x "$(command -v toilet)" ]; then
+        echo -e "\e[4;34m This Toll Was Created By \e[1;32mHk4crprasad \e[0m"
+    else
+        echo -e "\e[1;34mCreated By \e[1;34m"
+        toilet -f mono12 -F border Hk4crprasad
+    fi
+    echo -e "\e[1;34m For Any Queries Join Me!!!\e[0m"
+    echo -e "\e[4;32m   YouTube: https://www.youtube.com/c/Hk4crprasad \e[0m"
+    echo " "
+
+}
+
+while :
+do
+    banner
+    echo -e "\e[4;31m Please Read Instruction Carefully !!! \e[0m"
+    echo " "
+    echo "Press 1 To Kali " |lolcat
+    echo "Press 2 To Parrot 🐦 " |lolcat
+    echo "Press 3 To Ubuntu20 " |lolcat
+    echo "Press 4 To Ubuntu " |lolcat
+    echo "Press 5 To Fedora " |lolcat
+    echo "perss 6 To Alpine " |lolcat
+    echo "press 7 To Arch " |lolcat
+    echo "press 8 To Manjaro " |lolcat
+    echo "press 9 To Debian " |lolcat
+    read ch
+    clear
+    if [ $ch -eq 1 ];then
+    echo " Installation Started " | lolcat
+        bash script/kali
+        exit
+    elif [ $ch -eq 2 ];then
+     echo " Silence Installation Started Please DoNot Turn Off Your Data Connection " |lolcat
+        bash script/parrot > /dev/null 2>&1 
+        echo " Now Type ./start-parrot.sh " | lolcat
+        exit
+    elif [ $ch -eq 3 ];then
+         echo " Silence Installation Started Please DoNot Turn Off Your Data Connection It May Take 30 minutes " |lolcat
+        bash script/ubuntu20 > /dev/null 2>&1 
+        echo " Now Run ./start-ubuntu20.sh " | lolcat
+        exit
+    elif [ $ch -eq 4 ];then
+        echo " Silence Installation Started Please DoNot Turn Off Your Data Connection It May Take 30 minutes " |lolcat
+        bash script/ubuntu > /dev/null 2>&1 
+        echo " Now Run ./start-ubuntu.sh " | lolcat
+    elif [ $ch -eq 5 ];then
+        echo " Silence Installation Started Please DoNot Turn Off Your Data Connection It May Take 30 minutes " |lolcat
+        bash script/fedora > /dev/null 2>&1 
+        echo "Now Run ./start-fedora " | lolcat
+    elif [ $ch -eq 6 ];then
+       echo " Silence Installation Started Please DoNot Turn Off Your Data Connection It May Take 30 minutes " |lolcat
+        bash script/alpine > /dev/null 2>&1 
+        echo "Now Run ./start-aloine.sh " | lolcat
+    elif [ $ch -eq 7 ];then
+       echo " Silence Installation Started Please DoNot Turn Off Your Data Connection It May Take 30 minutes " |lolcat
+        bash script/arch > /dev/null 2>&1 
+        echo " Now Run ./start-arch.sh " | lolcat
+    elif [ $ch -eq 8 ];then
+       echo " Silence Installation Started Please DoNot Turn Off Your Data Connection It May Take 30 minutes " |lolcat
+        bash script/manjaro > /dev/null 2>&1 
+        echo " Now Run ./start-manjaro.sh "
+    elif [ $ch -eq 9 ];then
+       echo " Silence Installation Started Please DoNot Turn Off Your Data Connection It May Take 30 minutes " |lolcat
+       bash script/debian > /dev/null 2>&1 
+       echo " Now Run ./start-debian.sh "
+    else
+        echo -e "\e[4;32m Invalid Input !!! \e[0m"
+        pause
+    fi
+done
