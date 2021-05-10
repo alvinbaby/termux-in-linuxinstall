@@ -2,7 +2,7 @@
 pkg update > /dev/null 2>&1 ; pkg upgrade -y 
 pkg install wget -y > /dev/null 2>&1
 pkg install curl -y > /dev/null 2>&1
-pkg install chroot promot -y > /dev/null 2>&1
+pkg install chroot proot -y > /dev/null 2>&1
 pkg install ruby -y > /dev/null 2>&1 ; gem install lolcat > /dev/null 2>&1
 echo "for Install Any Linux TyPe Name Of The Linux Likekali fedora ubuntu ubuntu20 arch alpine manjaro " | lolcat
 clear
@@ -11,6 +11,19 @@ sleep 3
 echo 
 banner() {
     clear
+echo -e "\e[92m
+Linux installation ©\e[34m
+───▄▀▀▀▄▄▄▄▄▄▄▀▀▀▄───
+───█▒▒░░░░░░░░░▒▒█───
+────█░░█░░░░░█░░█────
+─▄▄──█░░░▀█▀░░░█──▄▄─
+█░░█─▀▄░░░░░░░▄▀─█░░█
+█▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀█
+█░░╦─╦╔╗╦─╔╗╔╗╔╦╗╔╗░░█
+█░░║║║╠─║─║─║║║║║╠─░░█
+█░░╚╩╝╚╝╚╝╚╝╚╝╩─╩╚╝░░█
+█▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█
+ \e[m"
     echo -e "\e[1;31m"
     if ! [ -x "$(command -v figlet)" ]; then
         echo 'Introducing Any Linux In Termux'
@@ -50,36 +63,44 @@ do
         bash script/kali
         exit
     elif [ $ch -eq 2 ];then
-     echo " Silence Installation Started Please DoNot Turn Off Your Data Connection " |lolcat
+        banner
+        echo " Silence Installation Started Please DoNot Turn Off Your Data Connection " |lolcat
         bash script/parrot > /dev/null 2>&1 
         echo " Now Type ./start-parrot.sh " | lolcat
         exit
     elif [ $ch -eq 3 ];then
-         echo " Silence Installation Started Please DoNot Turn Off Your Data Connection It May Take 30 minutes " |lolcat
+        banner
+        echo " Silence Installation Started Please DoNot Turn Off Your Data Connection It May Take 30 minutes " |lolcat
         bash script/ubuntu20 > /dev/null 2>&1 
         echo " Now Run ./start-ubuntu20.sh " | lolcat
         exit
     elif [ $ch -eq 4 ];then
+        banner
         echo " Silence Installation Started Please DoNot Turn Off Your Data Connection It May Take 30 minutes " |lolcat
         bash script/ubuntu > /dev/null 2>&1 
         echo " Now Run ./start-ubuntu.sh " | lolcat
     elif [ $ch -eq 5 ];then
+        banner
         echo " Silence Installation Started Please DoNot Turn Off Your Data Connection It May Take 30 minutes " |lolcat
         bash script/fedora > /dev/null 2>&1 
         echo "Now Run ./start-fedora " | lolcat
     elif [ $ch -eq 6 ];then
-       echo " Silence Installation Started Please DoNot Turn Off Your Data Connection It May Take 30 minutes " |lolcat
+        banner
+        echo " Silence Installation Started Please DoNot Turn Off Your Data Connection It May Take 30 minutes " |lolcat
         bash script/alpine > /dev/null 2>&1 
         echo "Now Run ./start-aloine.sh " | lolcat
     elif [ $ch -eq 7 ];then
-       echo " Silence Installation Started Please DoNot Turn Off Your Data Connection It May Take 30 minutes " |lolcat
+        banner
+        echo " Silence Installation Started Please DoNot Turn Off Your Data Connection It May Take 30 minutes " |lolcat
         bash script/arch > /dev/null 2>&1 
         echo " Now Run ./start-arch.sh " | lolcat
     elif [ $ch -eq 8 ];then
-       echo " Silence Installation Started Please DoNot Turn Off Your Data Connection It May Take 30 minutes " |lolcat
+        banner
+        echo " Silence Installation Started Please DoNot Turn Off Your Data Connection It May Take 30 minutes " |lolcat
         bash script/manjaro > /dev/null 2>&1 
         echo " Now Run ./start-manjaro.sh "
     elif [ $ch -eq 9 ];then
+       banner
        echo " Silence Installation Started Please DoNot Turn Off Your Data Connection It May Take 30 minutes " |lolcat
        bash script/debian > /dev/null 2>&1 
        echo " Now Run ./start-debian.sh "
