@@ -12,7 +12,11 @@ You can install any linux in termux like kali fedora ubuntu etc
 * `cd termux-in-linuxinstall`
 * `chmod 777 *`
 * `ls`
-* `./install.sh`
+* `./Install.sh`
+
+[Tool open comment]
+
+* `./linuxos.sh`
 
 ---
 
