@@ -58,13 +58,14 @@ Linux installation ©\e[34m
         figlet LinuX 
     fi
     if ! [ -x "$(command -v toilet)" ]; then
-        echo -e "\e[4;34m This Toll Was Created By \e[1;32mHk4crprasad \e[0m"
+        echo -e "\e[4;34m This Toll Was Created By \e[1;32malvinbaby \e[0m"
     else
         echo -e "\e[1;34mCreated By \e[1;34m"
-        toilet -f mono12 -F border Hk4crprasad
+        toilet -f mono12 -F border alvinbaby
     fi
     echo -e "\e[1;34m For Any Queries Join Me!!!\e[0m"
-    echo -e "\e[4;32m   YouTube: https://www.youtube.com/c/Hk4crprasad \e[0m"
+    echo -e "\e[4;32m   YouTube : https://www.youtube.com/c/MR JINN \e[0m"
+    echo -e "\e[3;38m  Telegram : @MrJinnTelegram \e[0m"
     echo " "
 
 }
