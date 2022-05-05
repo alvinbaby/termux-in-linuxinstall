@@ -14,7 +14,7 @@ You can install any linux in termux like kali fedora ubuntu etc
 * `ls`
 * `./install.sh`
 
-Choice and
+---
 
  +   Kali      " 1 "
  +   Parrot 🐦 " 2 "
@@ -30,3 +30,11 @@ Choice and
 
 ('1'2'3'4'5'6'7'8'9') 
            |choice|
+
+
+
+Telegram channel👇
+https://t.me/MrJinnTelegram
+
+GITHUB👇
+https://github.com/alvinbaby
