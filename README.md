@@ -38,7 +38,9 @@ You can install any linux in termux like kali fedora ubuntu etc
 
 
 Telegram channel👇
+
 https://t.me/MrJinnTelegram
 
 GITHUB👇
+
 https://github.com/alvinbaby
