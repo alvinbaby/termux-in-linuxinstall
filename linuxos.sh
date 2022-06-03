@@ -8,9 +8,9 @@ banner() {
 echo -e "\e[92m
 Linux installation ©\e[34m
 
-    +-+-+-+-+-+-+-+-+-+-+ +-+-+ +-+-+-+-+-+-+-+-+
-    |t|e|r|m|u|x|-|i|n|-|l|i|n|u|x|i|n|s|t|a|l|l|
-    +-+-+-+-+-+-+-+-+-+-+ +-+-+ +-+-+-+-+-+-+-+-+
+    +-+-+-+-+-+-+ +-+-+ +-+-+-+-+-+ +-+-+-+-+-+-+-+
+    |t|e|r|m|u|x|-|i|n|-|l|i|n|u|x|-|i|n|s|t|a|l|l|
+    +-+-+-+-+-+-+ +-+-+ +-+-+-+-+-+ +-+-+-+-+-+-+-+
                 +-+-+ +-+-+ +-+-+-+-+
                 |b|y| |M|R| |J|I|N|N|
                 +-+-+ +-+-+ +-+-+-+-+                                                                                        
@@ -30,7 +30,7 @@ Linux installation ©\e[34m
     fi
     echo -e "\e[1;34m For Any Queries Join Me!!!\e[0m"
     echo -e "\e[4;32m   YouTube : https://www.youtube.com/c/MR JINN \e[0m"
-    echo -e "\e[3;38m  Telegram : @MrJinnTelegram \e[0m"
+    echo -e "\e[4;32m  Telegram : @MrJinnTelegram \e[0m"
     echo " "
 
 }
